@@ -2,11 +2,13 @@ import React from 'react';
 import Socials from './Socials';
 import Logo from '../img/header/logo.png';
 import MobileNav from './MobileNav';
+import { AiOutlineCaretDown, AiOutlineCaretUp } from 'react-icons/ai';
 
 import { Link } from 'react-router-dom';  
 
 
 const Header = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   return (<h1 className=" fixed w-full px-[30px] lg:px-[100px] z-30 h-[100px] lg:h-[140px] flex items-center">
     <div className="flex flex-col lg:flex-row lg:items-center w-full justify-between">
       {  }
@@ -25,10 +27,11 @@ const Header = () => {
         className ="text-[#696c6d] hover:text-primary transition">
         About
         </Link>
+        
         <Link 
         to={'/portfolio'} 
         className ="text-[#696c6d] hover:text-primary transition">
-        Portfolio
+        Gallery
         </Link>
         <Link 
         to={'/contact'} 

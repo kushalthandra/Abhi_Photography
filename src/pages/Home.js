@@ -24,7 +24,7 @@ const Home = () => {
            transition={transition1}   
           className="w-full w-1/2 pt-36 pb-14 lg:pt-40 lg:pb-0 z-10 flex flex-col justify-center items-center lg:items-start">
             <h1 className="h1 text-center lg:text-left">
-              Photographer<br />&Film Maker
+              Photographer<br />&Videographer
             </h1>
             <p className="text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12 text-center lg:text-left">
               Vijayawada, India

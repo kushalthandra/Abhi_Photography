@@ -4,6 +4,7 @@ import Image1 from '../img/portfolio/1.png';
 import Image2 from '../img/portfolio/2.png';
 import Image3 from '../img/portfolio/3.png';
 import Image4 from '../img/portfolio/4.png'; 
+import Gallery1 from './Gallery1';
 import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
@@ -26,21 +27,18 @@ const Portfolio = () => {
                    exit={{opacity:0,y:'100%'}}
                    transition={transition1} 
         className='flex flex-col lg:items-start'>
-        <h1 className='h1'>Portfolio</h1>
+        <h1 className='h1'>Gallery</h1>
         <p className='mb-12 max-w-sm'>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          <b>Exercitationem, veritatis.</b> Veritatis illum aut,
-          reprehenderit sed dolorem dolore.
+        Welcome to the gallery, where every moment is captured with passion and precision.
+           Each image reflects beauty, emotion, and life’s essence.
           <br />
           <br />
-          Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit.
-          Recusandae, iure! Ullam, dolore? Eligendi, quam mollitia.
+          Explore the collection to discover timeless stories told through the lens, celebrating light, nature, and memories.
         </p>
         <Link 
-                to={'/contact'} 
+                to={'/gallery1'} 
                 className='btn rounded mb-[30px] mx-auto lg:mx-0'>
-                Hire me
+                View Gallery
              </Link>
 
         </motion.div>

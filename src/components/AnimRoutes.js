@@ -6,6 +6,7 @@ import Portfolio from '../pages/Portfolio';
 import { Animatemotion, AnimatePresence } from 'framer-motion';
 
 import { Routes, Route, useLocation } from 'react-router-dom';
+import Gallery1 from '../pages/Gallery1';
 
 const AnimRoutes = () => {
   const location = useLocation();
@@ -16,6 +17,7 @@ const AnimRoutes = () => {
     <Route path="/about" element={<About />} />
     <Route path="/portfolio" element={<Portfolio />} />
     <Route path="/contact" element={<Contact />} />
+    <Route path ="/gallery1" element={<Gallery1/>}/>
   </Routes>
   </AnimatePresence>);
 };

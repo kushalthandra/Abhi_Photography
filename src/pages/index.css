@@ -16,5 +16,15 @@
   body, html {
     overflow: auto;
   }
+  html, body {
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto; /* Allow vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on mobile */
+  }
+  
+  body {
+    margin: 0;
+  }
   
 }

@@ -4,6 +4,7 @@ import { CgMenuRight } from 'react-icons/cg';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+
 const menuVariants = {
   hidden:{
     x: '100%'
@@ -22,6 +23,7 @@ const MobileNav = () => {
    <div onClick={()=> setOpenMenu(true)}
     className='text-3xl cursor-pointer'>
     <CgMenuRight />
+    
 
    </div>
    <motion.div
@@ -42,7 +44,7 @@ const MobileNav = () => {
         <Link to='/about'>About</Link>
         </li>
         <li>
-        <Link to='/portfolio'>Portfolio</Link>
+        <Link to='/portfolio'>Gallery</Link>
         </li>
         <li>
         <Link to='/contact'>Contact</Link>
