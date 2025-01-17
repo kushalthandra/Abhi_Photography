@@ -4,7 +4,7 @@ import WomanImg from '../img/about/woman.jpg';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { transition1 } from '../transitions';
-import './index.css';
+
 
 const About = () => {
   return (
@@ -13,18 +13,18 @@ const About = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: '100%' }}
       transition={transition1}
-      className="section min-h-screen bg-gray-100"
+      className="section min-h-screen"
     >
       <div className="container mx-auto min-h-full relative">
         <div className="flex flex-col lg:flex-row h-full items-center justify-center gap-x-24 text-center lg:text-left lg:pt-16">
           {/* Image */}
-          <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none overflow-hidden">
+          <div className="flex-1 max-h-96 lg:max-h-max order-2 lg:order-none">
             <motion.img
               whileHover={{ scale: 1.1 }}
               transition={{ transition1 }}
               src={WomanImg}
               alt="About Me"
-              className="w-full max-w-sm lg:max-w-md mx-auto"
+              className="mt-20 w-full max-w-sm lg:max-w-md mx-auto"
             />
           </div>
           {/* Text */}
