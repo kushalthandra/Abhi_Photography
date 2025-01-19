@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
-import React from "react";
+import React, { useState } from "react";
+import { GrLinkNext, GrLinkPrevious } from "react-icons/gr";
+import { IoIosCloseCircle } from "react-icons/io";
 // Import sample images or replace with your own images
 import Image1 from "../img/portfolio/1.png";
 import Image2 from "../img/portfolio/2.png";
@@ -22,11 +24,7 @@ import Image18 from "../img/portfolio/18.jpg";
 import Image19 from "../img/portfolio/19.jpg";
 import Image20 from "../img/portfolio/20.jpg";
 
-
-
-
 const Gallery1 = () => {
-  // Create an array of 20 images using placeholders and existing images
   const images = [
     Image1,
     Image2,
@@ -49,6 +47,32 @@ const Gallery1 = () => {
     Image19,
     Image20,
   ];
+  
+  const [data, setData] = useState({ img: '', i: 0 });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const viewImage = (img, i) => {
+    setData({ img, i });
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const nextImage = () => {
+    setData(prev => ({
+      img: images[(prev.i + 1) % images.length],
+      i: (prev.i + 1) % images.length
+    }));
+  };
+
+  const prevImage = () => {
+    setData(prev => ({
+      img: images[(prev.i - 1 + images.length) % images.length],
+      i: (prev.i - 1 + images.length) % images.length
+    }));
+  };
 
   return (
     <section className="section">
@@ -67,14 +91,27 @@ const Gallery1 = () => {
               key={index}
               className="rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition duration-300 bg-white border-4 border-gray-300 sm:border-4 md:border-0"
             >
-            <img
+              <img
                 src={image}
                 alt={`Gallery Image ${index + 1}`}
                 className="w-full h-48 lg:h-64 object-cover"
+                onClick={() => viewImage(image, index)}
               />
             </div>
           ))}
         </div>
+
+        {/* Modal for Viewing Image */}
+        {isModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center">
+            <div className="relative">
+              <img src={data.img} alt="Selected" className="max-w-full max-h-full" />
+              <button onClick={closeModal} className="absolute top-0 right-0 p-2 text-white"><IoIosCloseCircle /></button>
+              <button onClick={prevImage} className="absolute left-0 p-2 text-white"><GrLinkPrevious className="m-2 bg-white text-2xl text-white hover:bg-white"/></button>
+              <button onClick={nextImage} className="absolute right-0 p-2 text-white"><GrLinkNext className="m-2 bg-white text-2xl text-white hover:bg-white"/></button>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

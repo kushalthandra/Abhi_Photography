@@ -3,7 +3,7 @@ import Home from '../pages/Home';
 import About from '../pages/About';
 import Contact from '../pages/Contact';
 import Portfolio from '../pages/Portfolio';
-import { Animatemotion, AnimatePresence } from 'framer-motion';
+import {AnimatePresence } from 'framer-motion';
 
 import { Routes, Route, useLocation } from 'react-router-dom';
 import Gallery1 from '../pages/Gallery1';
