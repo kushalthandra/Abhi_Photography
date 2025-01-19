@@ -12,7 +12,9 @@ const App = () => {
       {/* Main App Content */}
       <Router>
         <Header />
+        <div className="mt-1 pt-2">
         <AnimRoutes />
+        </div>
       </Router>
     </div>
   );
