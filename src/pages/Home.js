@@ -15,7 +15,7 @@ const Home = () => {
     className="section">
       <div className="container mx-auto h-full relative ">
         {/* Wrapper for Text and Image */}
-        <div className="overflow-hidden flex flex-col lg:flex-row h-full items-center lg:items-start justify-between">
+        <div className="flex flex-col lg:flex-row h-full items-center lg:items-start justify-between">
           {/* Text Section */}
           <motion.div 
            initial={{opacity:0,y:'-50'}}
@@ -29,9 +29,7 @@ const Home = () => {
             <p className="text-[26px] lg:text-[36px] font-primary mb-4 lg:mb-12 text-center lg:text-left">
               Vijayawada, India
             </p>
-            <Link to="/contact" className="btn mb-[30px] rounded">
-              Hire Me
-            </Link>
+            <a href="https://calendar.app.google/Dz8hXc12J6VogDit7" className="btn mb-[30px] rounded">Hire Me</a>
           </motion.div>
           {/* Image Section */}
           <motion.div 
