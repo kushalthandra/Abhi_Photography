@@ -118,7 +118,7 @@ const Albums = () => {
               Relive the magical moments of this special day through our carefully curated wedding album.
             </p>
             <Link to="/gallery1" className="btn rounded mb-6 mx-auto lg:mx-0">
-              View Gallery
+              View Wedding Album
             </Link>
           </motion.div>
 
