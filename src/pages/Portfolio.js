@@ -4,7 +4,6 @@ import Image1 from '../img/portfolio/1.png';
 import Image2 from '../img/portfolio/5.jpg';
 import Image3 from '../img/portfolio/3.png';
 import Image4 from '../img/portfolio/4.png'; 
-import Gallery1 from './Gallery1';
 import { Link } from 'react-router-dom';
 
 import { motion } from 'framer-motion';
@@ -36,9 +35,9 @@ const Portfolio = () => {
           Explore the collection to discover timeless stories told through the lens, celebrating light, nature, and memories.
         </p>
         <Link 
-                to={'/gallery1'} 
+                to={'/albums'} 
                 className='btn rounded mb-[30px] mx-auto lg:mx-0'>
-                View Gallery
+                View Albums
              </Link>
 
         </motion.div>
