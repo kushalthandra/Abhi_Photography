@@ -1,1 +1,1 @@
-# photography starter
+# photography portfolio website for a client
